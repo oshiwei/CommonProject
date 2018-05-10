@@ -14,6 +14,24 @@
 		840581A220A178C1006A0C82 /* RootListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84733D8320A0413100654AFC /* RootListViewController.m */; };
 		840581A320A178C3006A0C82 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84733D8620A0413100654AFC /* RootViewController.m */; };
 		840581A420A178C4006A0C82 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84733D8620A0413100654AFC /* RootViewController.m */; };
+		840AD58920A3F5EC00A3DFEC /* CPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD58720A3F5C400A3DFEC /* CPLocationManager.m */; };
+		840AD58A20A3F5EC00A3DFEC /* CPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD58720A3F5C400A3DFEC /* CPLocationManager.m */; };
+		840AD58D20A3F68C00A3DFEC /* CPAppDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD58B20A3F68C00A3DFEC /* CPAppDataCacheManager.m */; };
+		840AD58E20A3F68C00A3DFEC /* CPAppDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD58B20A3F68C00A3DFEC /* CPAppDataCacheManager.m */; };
+		840AD59320A41AF200A3DFEC /* MBProgressHUD+NHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD59120A41AB200A3DFEC /* MBProgressHUD+NHAdd.m */; };
+		840AD59420A41AF200A3DFEC /* MBProgressHUD+NHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD59120A41AB200A3DFEC /* MBProgressHUD+NHAdd.m */; };
+		840AD59620A41BE700A3DFEC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840AD59520A41BE700A3DFEC /* MBProgressHUD.bundle */; };
+		840AD59720A41BE700A3DFEC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840AD59520A41BE700A3DFEC /* MBProgressHUD.bundle */; };
+		840AD59C20A41E0D00A3DFEC /* CPNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD59920A41E0600A3DFEC /* CPNetworkCache.m */; };
+		840AD59D20A41E0E00A3DFEC /* CPNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD59920A41E0600A3DFEC /* CPNetworkCache.m */; };
+		840AD59E20A41E1100A3DFEC /* CPNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD59A20A41E0600A3DFEC /* CPNetworkHelper.m */; };
+		840AD59F20A41E1200A3DFEC /* CPNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD59A20A41E0600A3DFEC /* CPNetworkHelper.m */; };
+		840AD5A820A4207100A3DFEC /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD5A720A4206A00A3DFEC /* UIWebView+TS_JavaScriptContext.m */; };
+		840AD5A920A4207200A3DFEC /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD5A720A4206A00A3DFEC /* UIWebView+TS_JavaScriptContext.m */; };
+		840AD5AA20A4207A00A3DFEC /* CPJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD5A120A4205D00A3DFEC /* CPJSContext.m */; };
+		840AD5AB20A4207A00A3DFEC /* CPJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD5A120A4205D00A3DFEC /* CPJSContext.m */; };
+		840AD5AC20A4207D00A3DFEC /* CPWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD5A320A4205D00A3DFEC /* CPWebVC.m */; };
+		840AD5AD20A4207E00A3DFEC /* CPWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AD5A320A4205D00A3DFEC /* CPWebVC.m */; };
 		84733D5B20A035D600654AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84733D5A20A035D600654AFC /* Assets.xcassets */; };
 		84733D5E20A035D600654AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84733D5C20A035D600654AFC /* LaunchScreen.storyboard */; };
 		84733D6E20A03C0A00654AFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84733D6920A03C0A00654AFC /* main.m */; };
@@ -37,6 +55,24 @@
 		01E9D79ED027C9AB473C26E2 /* Pods-CP-CommonProjectDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-CommonProjectDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP-CommonProjectDev/Pods-CP-CommonProjectDev.debug.xcconfig"; sourceTree = "<group>"; };
 		20ABA2D57E8DABAF5EC6A107 /* libPods-CP-CommonProjectDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CP-CommonProjectDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405819E20A1496F006A0C82 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		840AD58720A3F5C400A3DFEC /* CPLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPLocationManager.m; sourceTree = "<group>"; };
+		840AD58820A3F5C500A3DFEC /* CPLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPLocationManager.h; sourceTree = "<group>"; };
+		840AD58B20A3F68C00A3DFEC /* CPAppDataCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAppDataCacheManager.m; sourceTree = "<group>"; };
+		840AD58C20A3F68C00A3DFEC /* CPAppDataCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAppDataCacheManager.h; sourceTree = "<group>"; };
+		840AD59020A41AB100A3DFEC /* MBProgressHUD_NHExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD_NHExtend.h; sourceTree = "<group>"; };
+		840AD59120A41AB200A3DFEC /* MBProgressHUD+NHAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NHAdd.m"; sourceTree = "<group>"; };
+		840AD59220A41AB200A3DFEC /* MBProgressHUD+NHAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NHAdd.h"; sourceTree = "<group>"; };
+		840AD59520A41BE700A3DFEC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		840AD59820A41E0500A3DFEC /* CPNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPNetworkCache.h; sourceTree = "<group>"; };
+		840AD59920A41E0600A3DFEC /* CPNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPNetworkCache.m; sourceTree = "<group>"; };
+		840AD59A20A41E0600A3DFEC /* CPNetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPNetworkHelper.m; sourceTree = "<group>"; };
+		840AD59B20A41E0600A3DFEC /* CPNetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPNetworkHelper.h; sourceTree = "<group>"; };
+		840AD5A120A4205D00A3DFEC /* CPJSContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPJSContext.m; sourceTree = "<group>"; };
+		840AD5A220A4205D00A3DFEC /* CPJSContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPJSContext.h; sourceTree = "<group>"; };
+		840AD5A320A4205D00A3DFEC /* CPWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPWebVC.m; sourceTree = "<group>"; };
+		840AD5A420A4205D00A3DFEC /* CPWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPWebVC.h; sourceTree = "<group>"; };
+		840AD5A620A4206A00A3DFEC /* UIWebView+TS_JavaScriptContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TS_JavaScriptContext.h"; sourceTree = "<group>"; };
+		840AD5A720A4206A00A3DFEC /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
 		84733D4E20A035D600654AFC /* CommonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84733D5A20A035D600654AFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84733D5D20A035D600654AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +135,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		840AD58220A3EE5E00A3DFEC /* LocalLib */ = {
+			isa = PBXGroup;
+			children = (
+				840AD58F20A41AA100A3DFEC /* MBProgressHUDExt */,
+				840AD58320A3EE5E00A3DFEC /* NetWork */,
+			);
+			path = LocalLib;
+			sourceTree = "<group>";
+		};
+		840AD58320A3EE5E00A3DFEC /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				840AD59820A41E0500A3DFEC /* CPNetworkCache.h */,
+				840AD59920A41E0600A3DFEC /* CPNetworkCache.m */,
+				840AD59B20A41E0600A3DFEC /* CPNetworkHelper.h */,
+				840AD59A20A41E0600A3DFEC /* CPNetworkHelper.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		840AD58420A3EE5E00A3DFEC /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		840AD58620A3EE7300A3DFEC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				840AD58820A3F5C500A3DFEC /* CPLocationManager.h */,
+				840AD58720A3F5C400A3DFEC /* CPLocationManager.m */,
+				840AD58C20A3F68C00A3DFEC /* CPAppDataCacheManager.h */,
+				840AD58B20A3F68C00A3DFEC /* CPAppDataCacheManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		840AD58F20A41AA100A3DFEC /* MBProgressHUDExt */ = {
+			isa = PBXGroup;
+			children = (
+				840AD59220A41AB200A3DFEC /* MBProgressHUD+NHAdd.h */,
+				840AD59120A41AB200A3DFEC /* MBProgressHUD+NHAdd.m */,
+				840AD59020A41AB100A3DFEC /* MBProgressHUD_NHExtend.h */,
+				840AD59520A41BE700A3DFEC /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUDExt;
+			sourceTree = "<group>";
+		};
+		840AD5A020A4204C00A3DFEC /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				840AD5A520A4206A00A3DFEC /* jscontent_webview */,
+				840AD5A220A4205D00A3DFEC /* CPJSContext.h */,
+				840AD5A120A4205D00A3DFEC /* CPJSContext.m */,
+				840AD5A420A4205D00A3DFEC /* CPWebVC.h */,
+				840AD5A320A4205D00A3DFEC /* CPWebVC.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		840AD5A520A4206A00A3DFEC /* jscontent_webview */ = {
+			isa = PBXGroup;
+			children = (
+				840AD5A620A4206A00A3DFEC /* UIWebView+TS_JavaScriptContext.h */,
+				840AD5A720A4206A00A3DFEC /* UIWebView+TS_JavaScriptContext.m */,
+			);
+			path = jscontent_webview;
+			sourceTree = "<group>";
+		};
 		84733D4520A035D600654AFC = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +228,10 @@
 			isa = PBXGroup;
 			children = (
 				84733D7F20A040EA00654AFC /* Define */,
-				84733D7320A040EA00654AFC /* Modules */,
+				840AD58220A3EE5E00A3DFEC /* LocalLib */,
+				840AD58420A3EE5E00A3DFEC /* ThirdLib */,
 				84733D6A20A03C0A00654AFC /* AppDelegate */,
+				84733D7320A040EA00654AFC /* Modules */,
 				84733D6720A03C0A00654AFC /* Supporting Files */,
 				84733D5A20A035D600654AFC /* Assets.xcassets */,
 				84733D5C20A035D600654AFC /* LaunchScreen.storyboard */,
@@ -155,6 +263,7 @@
 		84733D7320A040EA00654AFC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				840AD58620A3EE7300A3DFEC /* Manager */,
 				84733D7420A040EA00654AFC /* Root */,
 			);
 			path = Modules;
@@ -163,6 +272,7 @@
 		84733D7420A040EA00654AFC /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				840AD5A020A4204C00A3DFEC /* WebView */,
 				84733D7520A040EA00654AFC /* NavigationController */,
 				84733D7620A040EA00654AFC /* TabbarController */,
 				84733D7E20A040EA00654AFC /* ViewController */,
@@ -319,6 +429,7 @@
 			files = (
 				84733D5E20A035D600654AFC /* LaunchScreen.storyboard in Resources */,
 				84733D5B20A035D600654AFC /* Assets.xcassets in Resources */,
+				840AD59620A41BE700A3DFEC /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +439,7 @@
 			files = (
 				84733D9820A0446A00654AFC /* LaunchScreen.storyboard in Resources */,
 				84733D9920A0446A00654AFC /* Assets.xcassets in Resources */,
+				840AD59720A41BE700A3DFEC /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,9 +531,17 @@
 			files = (
 				84733D8220A040EA00654AFC /* UITabBar+CustomBadge.m in Sources */,
 				84733D8120A040EA00654AFC /* CPTabBar.m in Sources */,
+				840AD58920A3F5EC00A3DFEC /* CPLocationManager.m in Sources */,
 				840581A120A178C1006A0C82 /* RootListViewController.m in Sources */,
+				840AD5AA20A4207A00A3DFEC /* CPJSContext.m in Sources */,
+				840AD59E20A41E1100A3DFEC /* CPNetworkHelper.m in Sources */,
+				840AD59C20A41E0D00A3DFEC /* CPNetworkCache.m in Sources */,
+				840AD5A820A4207100A3DFEC /* UIWebView+TS_JavaScriptContext.m in Sources */,
+				840AD58E20A3F68C00A3DFEC /* CPAppDataCacheManager.m in Sources */,
+				840AD5AC20A4207D00A3DFEC /* CPWebVC.m in Sources */,
 				8405819F20A178B0006A0C82 /* RootNavigationController.m in Sources */,
 				84733D7220A03CED00654AFC /* AppDelegate+AppService.m in Sources */,
+				840AD59320A41AF200A3DFEC /* MBProgressHUD+NHAdd.m in Sources */,
 				840581A320A178C3006A0C82 /* RootViewController.m in Sources */,
 				84733D6F20A03C0A00654AFC /* AppDelegate.m in Sources */,
 				84733D8020A040EA00654AFC /* MainTabBarController.m in Sources */,
@@ -435,9 +555,17 @@
 			files = (
 				84733D9020A0446A00654AFC /* UITabBar+CustomBadge.m in Sources */,
 				84733D9120A0446A00654AFC /* CPTabBar.m in Sources */,
+				840AD58A20A3F5EC00A3DFEC /* CPLocationManager.m in Sources */,
 				840581A220A178C1006A0C82 /* RootListViewController.m in Sources */,
+				840AD5AB20A4207A00A3DFEC /* CPJSContext.m in Sources */,
+				840AD59F20A41E1200A3DFEC /* CPNetworkHelper.m in Sources */,
+				840AD59D20A41E0E00A3DFEC /* CPNetworkCache.m in Sources */,
+				840AD5A920A4207200A3DFEC /* UIWebView+TS_JavaScriptContext.m in Sources */,
+				840AD58D20A3F68C00A3DFEC /* CPAppDataCacheManager.m in Sources */,
+				840AD5AD20A4207E00A3DFEC /* CPWebVC.m in Sources */,
 				840581A020A178B0006A0C82 /* RootNavigationController.m in Sources */,
 				84733D9220A0446A00654AFC /* AppDelegate+AppService.m in Sources */,
+				840AD59420A41AF200A3DFEC /* MBProgressHUD+NHAdd.m in Sources */,
 				840581A420A178C4006A0C82 /* RootViewController.m in Sources */,
 				84733D9320A0446A00654AFC /* AppDelegate.m in Sources */,
 				84733D9420A0446A00654AFC /* MainTabBarController.m in Sources */,

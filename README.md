@@ -14,4 +14,10 @@
 ## 用CocoaPods管理第三方库
 两个target共用同样的pods，Podfile语法请参考：https://guides.cocoapods.org/using/the-podfile.html
 
+##目录结构
+Define：一些宏定义文件。
+LocalLib：一些本地库，自己写的一些控件、工具、category等，包括自己对第三放库的二次封装。
+ThirdLib：一些第三方库，第三放库尽量用CocoaPods管理，不能用CocoaPods管理的放在这，像一些第三方分享库。
+AppDelegate：应用代理，应用级事件可能会比较多，最好通过category分文件管理。
+Modules：业务模块，里面有Root、Manager两个基本子目录。Root存放项目基类，包含一些定制化的内容。Manager是全局的基础管理服务，通常用类方法或单例实现。
 
