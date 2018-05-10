@@ -2,7 +2,7 @@
 项目框架
 
 ## 添加PCH文件
-新建文件，选择`PCH File`，要在`#ifdef __OBJC__``#endif`之间添加需要全局引用的OC头文件，才能避免被工程中的C文件引用到产生错误。
+新建文件，选择`PCH File`，要在`#ifdef __OBJC__`与`#endif`之间添加需要全局引用的OC头文件，才能避免被工程中的C文件引用到产生错误。
 将pch文件预编译功能（`Precompile Prefix Header`）打开，可以提高下次编译速度。
 设置pch文件路径（`Prefix Header`）路径`$(SRCROOT)/Supporting Files/PrefixHeader.pch`。
 
