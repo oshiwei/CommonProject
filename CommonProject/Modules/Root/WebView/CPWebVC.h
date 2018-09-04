@@ -11,7 +11,7 @@
 
 @interface CPWebVC : RootViewController
 
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, copy) NSString *url;
 @property (nonatomic, strong, readonly) UIWebView *webView;
 @property (nonatomic, strong, readonly) CPJSContext *jsContext;
 @property (nonatomic, assign) BOOL useWebTitle; //使用网页标题，默认YES

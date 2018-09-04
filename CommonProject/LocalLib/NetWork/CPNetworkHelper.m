@@ -54,15 +54,15 @@ static AFHTTPSessionManager *_sessionManager;
 + (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters
                modelClass:(Class)modelClass
-            responseCache:(void (^)(id _Nullable))responseCache
-                  success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                  failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+            responseCache:(void (^)(id responseCache))responseCache
+                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     //读取缓存
     responseCache != nil ? responseCache([CPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
     
     NSURLSessionTask *sessionTask = nil;
-    sessionTask = [_sessionManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    sessionTask = [_sessionManager GET:URL parameters:parameters progress:^(NSProgress *uploadProgress) {
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
         id backObject = responseObject;
         if (modelClass && responseObject) {
             backObject = [modelClass modelWithJSON:responseObject];
@@ -70,7 +70,7 @@ static AFHTTPSessionManager *_sessionManager;
         success ? success(task, backObject) : nil;
         //对数据进行异步缓存
         responseCache != nil ? [CPNetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure ? failure(task, error) : nil;
     }];
     return sessionTask;
@@ -81,15 +81,15 @@ static AFHTTPSessionManager *_sessionManager;
          requestSerializer:(HBRequestSerializer)requestSerializer
                 parameters:(id)parameters
                 modelClass:(Class)modelClass
-             responseCache:(void (^)(id _Nullable))responseCache
-                   success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                   failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+             responseCache:(void (^)(id responseCache))responseCache
+                   success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                   failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     //读取缓存
     responseCache != nil ? responseCache([CPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
     [self setRequestSerializer:requestSerializer];
     NSURLSessionTask *sessionTask = nil;
-    sessionTask = [_sessionManager POST:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+    sessionTask = [_sessionManager POST:URL parameters:parameters progress:^(NSProgress *uploadProgress) {
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
         id backObject = responseObject;
         if (modelClass && responseObject) {
             backObject = [modelClass modelWithJSON:responseObject];
@@ -97,7 +97,7 @@ static AFHTTPSessionManager *_sessionManager;
         success ? success(task, backObject) : nil;
         //对数据进行异步缓存
         responseCache != nil ? [CPNetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure ? failure(task, error) : nil;
     }];
     return sessionTask;
@@ -106,18 +106,18 @@ static AFHTTPSessionManager *_sessionManager;
 + (NSURLSessionTask *)POST:(NSString *)URL
                 parameters:(id)parameters
                 modelClass:(Class)modelClass
-             responseCache:(void (^)(id _Nullable))responseCache
-                   success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                   failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+             responseCache:(void (^)(id responseCache))responseCache
+                   success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                   failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     return [self POST:URL requestSerializer:HBRequestSerializerJSON parameters:parameters modelClass:modelClass responseCache:responseCache success:success failure:failure];
 }
 
 + (NSURLSessionTask *)EncodePOST:(NSString *)URL
                       parameters:(id)parameters
                       modelClass:(Class)modelClass
-                   responseCache:(void (^)(id _Nullable))responseCache
-                         success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                         failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+                   responseCache:(void (^)(id responseCache))responseCache
+                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     return [self POST:URL requestSerializer:HBRequestSerializerHTTP parameters:parameters modelClass:modelClass responseCache:responseCache success:success failure:failure];
 }
 

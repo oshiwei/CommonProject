@@ -12,7 +12,7 @@
 #import "CPTabBar.h"
 
 @interface MainTabBarController ()<UITabBarControllerDelegate>
-@property (nonatomic,strong) NSMutableArray * VCS;//tabbar root VC
+@property (nonatomic, strong) NSMutableArray *VCS;//tabbar root VC
 @end
 
 @implementation MainTabBarController

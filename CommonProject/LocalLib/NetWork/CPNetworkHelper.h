@@ -11,6 +11,8 @@
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #import "CPNetworkCache.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #ifndef kIsNetwork
 #define kIsNetwork     [CPNetworkHelper isNetwork]  // 一次性判断是否有网的宏
 #endif
@@ -48,32 +50,32 @@ typedef NS_ENUM(NSUInteger, HBRequestSerializer) {
 + (BOOL)isWiFiNetwork;
 
 
-+ (nullable NSURLSessionTask *)GET:(nonnull NSString *)URL
-                        parameters:(nullable id)parameters
-                        modelClass:(nullable Class)modelClass
-                     responseCache:(nullable void (^)(id _Nullable))responseCache
-                           success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                           failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
++ (NSURLSessionTask *)GET:(NSString *)URL
+               parameters:(id)parameters
+               modelClass:(Class)modelClass
+            responseCache:(void (^)(id responseCache))responseCache
+                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
 
-+ (nullable NSURLSessionTask *)POST:(nonnull NSString *)URL
-                         parameters:(nullable id)parameters
-                         modelClass:(nullable Class)modelClass
-                      responseCache:(nullable void (^)(id _Nullable))responseCache
-                            success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                            failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
++ (NSURLSessionTask *)POST:(NSString *)URL
+                parameters:(id)parameters
+                modelClass:(Class)modelClass
+             responseCache:(void (^)(id responseCache))responseCache
+                   success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                   failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
-+ (nullable NSURLSessionTask *)EncodePOST:(nonnull NSString *)URL
-                               parameters:(nullable id)parameters
-                               modelClass:(nullable Class)modelClass
-                        responseCache:(nullable void (^)(id _Nullable))responseCache
-                                  success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                                  failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
++ (NSURLSessionTask *)EncodePOST:(NSString *)URL
+                      parameters:(id)parameters
+                      modelClass:(Class)modelClass
+                   responseCache:(void (^)(id responseCache))responseCache
+                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
-+ (nullable NSURLSessionDownloadTask *)downloadTaskWithRequest:(nonnull NSURLRequest *)request
-                                                      progress:(nullable void (^)(NSProgress * _Nullable downloadProgress)) downloadProgressBlock
-                                                   destination:(nullable NSURL * _Nullable (^)(NSURL * _Nullable targetPath, NSURLResponse * _Nullable response))destination
-                                             completionHandler:(nullable void (^)(NSURLResponse * _Nullable response, NSURL * _Nullable filePath, NSError * _Nullable error))completionHandler;
++ (NSURLSessionDownloadTask *)downloadTaskWithRequest:(NSURLRequest *)request
+                                             progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+                                          destination:(NSURL * (^)(NSURL *targetPath, NSURLResponse *response))destination
+                                    completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler;
 
 #pragma mark - 设置AFHTTPSessionManager相关属性
 #pragma mark - 注意: 因为全局只有一个AFHTTPSessionManager实例,所以以下设置方式全局生效
@@ -86,3 +88,5 @@ typedef NS_ENUM(NSUInteger, HBRequestSerializer) {
 + (void)setRequestSerializer:(HBRequestSerializer)requestSerializer;
 
 @end
+
+NS_ASSUME_NONNULL_END

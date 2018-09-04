@@ -31,6 +31,6 @@
 
 @interface CPJSContext : NSObject <CPJSContextProtocol>
 
-@property (nonatomic, strong) void (^jumpTo)(NSString *url);
+@property (nonatomic, copy) void (^jumpTo)(NSString *url);
 
 @end

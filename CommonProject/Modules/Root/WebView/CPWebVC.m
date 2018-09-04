@@ -146,7 +146,7 @@
 #pragma mark - setter
 
 - (void)setUrl:(NSString *)url {
-    _url = url?url:@"";
+    _url = url?[url copy]:@"";
     if (_webView) {
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     }
